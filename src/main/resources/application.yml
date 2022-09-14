@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/khanoo
+    username: postgres
+    password: 123
+
+
+  jpa:
+    database-platform: org.hibernate.spatial.dialect.postgis.PostgisDialect
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+
+
+minio:
+  bucket:
+    name: logo
+    default:
+      folder: "/"
+    access:
+      name: minioadmin
+      secret: minioadmin
+    url: http://127.0.0.1:9000
+
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: MonitoringkhanooDemoProject
+
+
+
