@@ -10,4 +10,4 @@ data-mapstruct-lombok
 
 Extra tool for monitoring:
 
-prometheus and garfana for monitoring
+prometheus and grafana 
